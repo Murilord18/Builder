@@ -5,14 +5,12 @@ import java.util.Date;
 
 public class ContaBancaria {
 
-    // Campos obrigatórios
     private String numeroConta;
     private String agencia;
     private String cpfTitular;
     private String nomeTitular;
-    private String tipoConta;        // CORRENTE, POUPANCA, SALARIO
+    private String tipoConta;       
 
-    // Campos opcionais
     private String emailTitular;
     private String telefoneTitular;
     private String enderecoLogradouro;
@@ -40,7 +38,7 @@ public class ContaBancaria {
         this.contaDigital = false;
     }
 
-    // ──────────────────── Getters & Setters ────────────────────
+
 
     public String getNumeroConta() { return numeroConta; }
     public void setNumeroConta(String numeroConta) { this.numeroConta = numeroConta; }
