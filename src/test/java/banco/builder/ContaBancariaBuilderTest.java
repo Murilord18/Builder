@@ -20,4 +20,19 @@ public class ContaBancariaBuilderTest {
         );
         assertEquals("Número da conta inválido", ex.getMessage());
     }
+
+    @Test
+    void deveRetornarExcecaoParaContaSemAgencia() {
+        IllegalArgumentException ex = assertThrows(IllegalArgumentException.class, () ->
+                new ContaBancariaBuilder()
+                        .setNumeroConta("12345-6")
+                        .setCpfTitular("123.456.789-00")
+                        .setNomeTitular("João da Silva")
+                        .setTipoConta("CORRENTE")
+                        .build()
+        );
+        assertEquals("Agência inválida", ex.getMessage());
+    }
+
+    
 }
